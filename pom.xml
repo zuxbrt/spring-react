@@ -56,6 +56,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.example.springreact</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<!-- NB! Set <version> to the latest released version of frontend-maven-plugin, like in README.md -->
+				<version>1.9.1</version>
+			</plugin>
 		</plugins>
 	</build>
 
