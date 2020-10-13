@@ -5,6 +5,9 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Version;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity // <1>
 public class Employee {
@@ -13,6 +16,8 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String description;
+
+	private @Version @JsonIgnore Long version;
 
 	private Employee() {}
 
@@ -69,6 +74,14 @@ public class Employee {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Long getVersion(Long version) {
+		return version;
+	}
+
+	public void setVersion(Long version) {
+		this.version = version;
 	}
 
 	@Override
