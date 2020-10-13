@@ -14,6 +14,12 @@
 	<name>spring-react</name>
 	<description>Spring &amp; React </description>
 
+	<configuration>
+		<processTypes>
+			<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+		</processTypes>
+	</configuration>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -74,7 +80,11 @@
 				<!-- NB! Set <version> to the latest released version of frontend-maven-plugin, like in README.md -->
 				<version>1.9.1</version>
 			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.3</version>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
